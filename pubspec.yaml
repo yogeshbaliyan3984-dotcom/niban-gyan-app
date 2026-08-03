@@ -1,0 +1,19 @@
+name: niban_gyan
+description: Niban Gyan App
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  provider: ^6.1.2
+  sqflite: ^2.3.2
+  path: ^1.9.0
+  share_plus: ^9.0.0
+  google_fonts: ^6.2.1
+
+flutter:
+  uses-material-design: true
