@@ -1,5 +1,5 @@
 name: niban_gyan
-description: Niban Gyan App
+description: "Niban Gyan App"
 publish_to: 'none'
 version: 1.0.0+1
 
@@ -10,8 +10,6 @@ dependencies:
   flutter:
     sdk: flutter
   provider: ^6.1.2
-  sqflite: ^2.3.2
-  path: ^1.9.0
   share_plus: ^9.0.0
   google_fonts: ^6.2.1
 
