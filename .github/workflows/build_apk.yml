@@ -1,36 +1,17 @@
-name: Build Android APK
+name: niban_gyan
+description: "Niban Gyan App"
+publish_to: 'none'
+version: 1.0.0+1
 
-on:
-  push:
-    branches: [ main, master ]
-  workflow_dispatch:
+environment:
+  sdk: '>=3.0.0 <4.0.0'
 
-jobs:
-  build:
-    runs-on: ubuntu-latest
+dependencies:
+  flutter:
+    sdk: flutter
+  provider: ^6.1.2
+  share_plus: ^9.0.0
+  google_fonts: ^6.2.1
 
-    steps:
-      - uses: actions/checkout@v4
-
-      - name: Set up Java
-        uses: actions/setup-java@v3
-        with:
-          distribution: 'zulu'
-          java-version: '17'
-
-      - name: Set up Flutter
-        uses: subosito/flutter-action@v2
-        with:
-          channel: 'stable'
-
-      - name: Install dependencies
-        run: flutter pub get
-
-      - name: Build APK
-        run: flutter build apk --release --no-tree-shake-icons
-
-      - name: Upload APK Artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: Niban-Gyan-APK
-          path: build/app/outputs/flutter-apk/app-release.apk
+flutter:
+  uses-material-design: true
